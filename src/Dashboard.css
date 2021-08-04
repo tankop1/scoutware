@@ -1,0 +1,83 @@
+@font-face {
+    font-family: Aristotelica;
+    src: url(assets/aristotelica.text-trial-regular.ttf);
+}
+
+::selection {
+    background-color: linear-gradient(red, blue);
+}
+
+.dashboard {
+    background-color: rgb(50, 50, 50);
+    width: 100%;
+    height: calc(100vh - 61px);
+}
+
+.welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.welcome-text {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    font-family: Aristotelica;
+    width: 65%;
+    margin-left: 12%;
+    transform: translateX(-120%);
+    animation: moveLeft 1500ms ease;
+    animation-fill-mode: forwards;
+}
+
+.welcome-title {
+    font-size: 6rem;
+}
+.welcome-info {
+    font-size: 2rem;
+    margin-top: -85px; /* FIX THIS */
+}
+
+.welcome-img {
+    width: 500px;
+    height: 500px;
+    background-image: url(https://wallpaperaccess.com/full/5826.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 10%;
+
+    mask-image: url(https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2014/10/mask-image.png);
+    -webkit-mask-image: url(https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2014/10/mask-image.png);
+    mask-size: 400px 350px;
+    -webkit-mask-size: 400px 350px;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+    z-index: 1;
+
+    transform: translateX(150%);
+    animation: moveRight 1500ms ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(-150%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(120%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
