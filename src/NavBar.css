@@ -32,6 +32,9 @@ a {
     padding: 0 1rem;
     border-bottom: var(--border);
     font-family: var(--font-family);
+    position: fixed;
+    width: calc(100% - 25px);
+    z-index: 2;
 }
 
 .navbar-nav {

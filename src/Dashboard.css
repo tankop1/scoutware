@@ -3,20 +3,25 @@
     src: url(assets/aristotelica.text-trial-regular.ttf);
 }
 
-::selection {
-    background-color: linear-gradient(red, blue);
-}
-
 .dashboard {
-    background-color: rgb(50, 50, 50);
     width: 100%;
     height: calc(100vh - 61px);
+}
+
+.dashboard-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .welcome {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transform: translateY(-110%);
+    animation: moveDown 1250ms ease;
+    animation-fill-mode: forwards;
 }
 
 .welcome-text {
@@ -27,9 +32,6 @@
     font-family: Aristotelica;
     width: 65%;
     margin-left: 12%;
-    transform: translateX(-120%);
-    animation: moveLeft 1500ms ease;
-    animation-fill-mode: forwards;
 }
 
 .welcome-title {
@@ -58,10 +60,16 @@
     mask-position: center;
     -webkit-mask-position: center;
     z-index: 1;
+}
 
-    transform: translateX(150%);
-    animation: moveRight 1500ms ease;
-    animation-fill-mode: forwards;
+@keyframes moveDown {
+    0% {
+        transform: translateY(-110%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
 }
 
 @keyframes moveLeft {
@@ -80,4 +88,199 @@
     100% {
         transform: translateX(0%);
     }
+}
+
+.campout-item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 425px;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translateX(-110%);
+    animation: moveLeft 1250ms ease;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+.campout-item-text {
+    font-family: Aristotelica;
+    text-shadow: 0px 0px 5px white;
+    text-align: center;
+    max-width: 80%;
+}
+
+.campout-item-bundle {
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@font-face {
+    font-family: typoGrotesk;
+    src: url(assets/Typo\ Grotesk\ Thin\ Demo.otf);
+}
+
+.item-title {
+    font-family: typoGrotesk;
+    font-size: 2rem;
+    font-weight: bolder;
+    background: -webkit-linear-gradient(180deg,red,orange,yellow,green);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-stretch: ultra-expanded;
+    width: min-content;
+    display: none;
+}
+
+.campout-item-date {
+    font-size: 1.75rem;
+}
+
+.campout-item-activity {
+    font-size: 3rem;
+}
+
+.campout-item-button {
+    border: 3px solid black;
+    color: black;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    background-color: transparent;
+    transition: transform 300ms;
+    border-radius: 15px;
+    padding: 4px 10px;
+    font-family: Aristotelica;
+    cursor: pointer;
+    box-shadow: 0px 0px 3px white;
+    text-shadow: 0px 0px 5px white;
+}
+
+.campout-item-button:hover {
+    transform: scale(1.05);
+}
+
+/* VOLUNTEER ITEM */
+
+.volunteer-item {
+    width: 800px;
+    transform: translateX(110%);
+    animation: moveRight 1250ms ease;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+.job-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.job-image {
+    object-fit: cover;
+    width: 105px;
+    height: 105px;
+    border-radius: 15px;
+}
+
+.job-text {
+    width: 70%;
+    color: white;
+    font-family: Aristotelica;
+    height: 150px;
+    height: 135px;
+}
+
+.job-info {
+    margin-top: -15px;
+    font-weight: bold;
+}
+
+.job-desc {
+    margin-top: -5px;
+}
+
+.job-button {
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #242526;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: white;
+    transition: filter 300ms;
+}
+
+.job-button:hover {
+    filter: brightness(1.2);
+}
+
+.job-button svg {
+    fill: white;
+    width: 25px;
+    height: 25px;
+}
+
+/* CONTACT ITEM */
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 250px;
+    height: 200px;
+    font-family: Aristotelica;
+}
+
+.contact-title {
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.contact-body {
+    color: rgb(201, 201, 201);
+    margin-top: 0px;
+}
+
+.contact-button {
+    margin-top: 8px;
+    background-color: #242526;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: white;
+    transition: filter 300ms;
+    border: none;
+    border-radius: 15px;
+    padding: 6px 15px;
+}
+
+.contact-button:hover {
+    filter: brightness(1.2);
+}
+
+/* FOOTER */
+
+.footer {
+    width: 100%;
+    height: 40px;
+    background-color: #484a4d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 150px;
+}
+
+.copyright {
+    padding: 0px 20px;
+    font-family: cursive;
 }
