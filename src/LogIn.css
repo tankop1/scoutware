@@ -1,0 +1,74 @@
+@font-face {
+    font-family: Aristotelica;
+    src: url(assets/aristotelica.text-trial-regular.ttf);
+}
+
+.log-in {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(50, 50, 50);
+    position: absolute;
+    z-index: 4;
+}
+
+.log-in-container {
+    background-color: #242526;
+    width: 60%;
+    height: 65%;
+    border-radius: 25px;
+    color: white;
+    font-family: Aristotelica;
+}
+
+.login-form {
+    width: 90%;
+    height: 70%;
+    margin-top: 15%;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.submit-fields {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    width: 425px;
+}
+
+.login-submit {
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #484a4d;
+    color: white;
+    font-family: Aristotelica;
+    cursor: pointer;
+    transition: filter 300ms;
+    font-size: 1.2rem;
+}
+
+.google-submit {
+    background-color: rgb(56, 56, 255);
+}
+
+.login-submit:hover {
+    filter: brightness(1.2);
+}
+
+.to-signup {
+    font-size: 1.2rem;
+    margin-top: -75px;
+}
+
+.link-to-signup {
+    color: #717377;
+    text-decoration: underline;
+}

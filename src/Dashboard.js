@@ -1,11 +1,24 @@
 import './Dashboard.css';
 import { Link } from 'react-router-dom';
 import { ReactComponent as SignUpIcon } from './assets/new-user.svg';
+import { auth } from './App';
+
+function getFirstWord(text) {
+    let word = '';
+    for (let i = 0; i < text.length; i++) {
+        if (text[i] === ' ') {
+            return word;
+        }
+        else {
+            word += text[i];
+        }
+    }
+}
 
 export function Dashboard(props) {
     return (
         <div className="dashboard">
-            <Welcome name="Tanner" rank="Life" position="Webmaster"/>
+            <Welcome name={auth.currentUser && getFirstWord(auth.currentUser.displayName)} rank="Life" position="Webmaster"/>
             <div className="dashboard-items" style={{marginTop: '50px'}}>
                 <CampoutItem image="https://i5.walmartimages.com/asr/da857512-049f-4bd3-85da-a41ae206c98d.72667db24ef1835d0efa1caf1492dade.jpeg" date="August 21st, 2021" activity="Altitude H2O Water Park"/>
                 <VolunteerItem />

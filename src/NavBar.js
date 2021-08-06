@@ -25,6 +25,8 @@ import { ReactComponent as FlagLeaderIcon } from './assets/flag-leader.svg';
 import { ReactComponent as PresentationIcon } from './assets/leader.svg';
 import { ReactComponent as TrainingIcon } from './assets/dumbbell.svg';
 
+import { auth } from './App';
+
 export function NavBar(props) {
   return (
     <nav className="navbar">
@@ -65,8 +67,14 @@ export function DropdownMenu(props) {
     }
 
     function DropdownItem(props) {
+
+        function onClick() {
+            props.goToMenu && setActiveMenu(props.goToMenu);
+            props.children === 'Logout' && auth.signOut();
+        }
+
         return (
-            <a href="#" className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
+            <a href="#" className="menu-item" onClick={onClick}>
                 <span className="icon-button">{props.leftIcon}</span>
     
                 <span style={{marginLeft: '8px'}}>{props.children}</span>
@@ -82,7 +90,7 @@ export function DropdownMenu(props) {
             <CSSTransition in={activeMenu === 'main'} unmountOnExit timeout={500} classNames="menu-primary" onEnter={calcHeight}>
                 <div className="menu">
 
-                    <DropdownItem leftIcon={<UserIcon/>}>Tanner Kopel</DropdownItem>
+                    <DropdownItem leftIcon={<UserIcon/>}>{ auth.currentUser && auth.currentUser.displayName }</DropdownItem>
                     <DropdownItem goToMenu="camping" leftIcon={<TentIcon/>} rightIcon={<CaretIcon/>}>Campout Manager</DropdownItem>
                     <DropdownItem goToMenu="advancement" leftIcon={<FleurIcon/>} rightIcon={<CaretIcon/>}>Advancement</DropdownItem>
                     <DropdownItem goToMenu="badge" leftIcon={<BadgeIcon/>} rightIcon={<CaretIcon/>}>Merit Badges</DropdownItem>

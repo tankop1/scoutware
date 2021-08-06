@@ -1,0 +1,170 @@
+@font-face {
+    font-family: Aristotelica;
+    src: url(assets/aristotelica.text-trial-regular.ttf);
+}
+
+.sign-up {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(50, 50, 50);
+    position: absolute;
+    z-index: 4;
+}
+
+.sign-up-container {
+    background-color: #242526;
+    width: 60%;
+    height: 65%;
+    border-radius: 25px;
+    color: white;
+    font-family: Aristotelica;
+}
+
+@font-face {
+    font-family: typoGrotesk;
+    src: url(assets/Typo\ Grotesk\ Thin\ Demo.otf);
+}
+
+.sign-up-logo {
+    position: absolute;
+    font-family: typoGrotesk;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: filter 300ms;
+    background: -webkit-linear-gradient(180deg, red,orange,yellow,green,rgb(48, 48, 233), violet);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    width: 300px;
+    margin-left: calc(30% - 150px);
+}
+
+.sign-up-logo:hover {
+    filter: brightness(1.35);
+}
+
+.sign-up-form {
+    width: 90%;
+    height: 70%;
+    margin-top: 15%;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.name-fields {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 450px;
+}
+
+.sign-up-item {
+    border-bottom: 2px dashed white;
+    transition: border-color 300ms;
+}
+
+.sign-up-item::after {
+    content: "";
+    position: relative;
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #d16dff;
+    transform: scaleX(0);
+    transform-origin: 0%;
+    transition: transform 500ms ease;
+    top: 2px;
+}
+
+.sign-up-item:focus-within {
+    border-color: transparent;
+}
+
+.sign-up-item:focus-within::after {
+    transform: scaleX(1);
+}
+
+.sign-up-input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: white;
+    font-family: Aristotelica;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.sign-up-email:invalid {
+    color: orangered;
+}
+
+.password-button {
+    background-color: #484a4d;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border: none;
+    cursor: pointer;
+    transition: filter 300ms;
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 420px;
+}
+
+.password-button:hover {
+    filter: brightness(1.2);
+}
+
+.password-button svg {
+    transform: scale(1.25);
+    fill: white;
+}
+
+.submit-fields {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    width: 425px;
+}
+
+.sign-up-submit {
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #484a4d;
+    color: white;
+    font-family: Aristotelica;
+    cursor: pointer;
+    transition: filter 300ms;
+    font-size: 1.2rem;
+}
+
+.google-submit {
+    background-color: rgb(56, 56, 255);
+}
+
+.sign-up-submit:hover {
+    filter: brightness(1.2);
+}
+
+.to-login {
+    font-size: 1.2rem;
+    margin-top: -50px;
+}
+
+.link-to-login {
+    color: #717377;
+    text-decoration: underline;
+}
