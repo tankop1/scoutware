@@ -39,7 +39,7 @@ function Welcome(props) {
         <section className="welcome">
             <div className="welcome-text">
                 <h1 className="welcome-title">Welcome {props.name}</h1>
-                <h3 className="welcome-info">Troop <span style={{fontFamily: 'cursive', fontSize: '1.7rem'}}>570</span> • {props.rank} Rank • {props.position}</h3>
+                <h3 className="welcome-info">{props.rank} Rank • {props.position}</h3>
             </div>
             <div className="welcome-img"></div>
         </section>
@@ -114,8 +114,8 @@ function ContactItem() {
 
 function CalendarItem(props) {
     return (
-        <section className="calendar-item" style={{marginTop: 100}}>
-            <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=dDU3MGNhbGVuZGFyQGdtYWlsLmNvbQ&amp;color=%237CB342&amp;showTitle=0&amp;showPrint=0&amp;showCalendars=1&amp;showTz=0&amp;showTabs=0&amp;showNav=1" style={{borderWidth: 0, borderRadius: '25px'}} width="1000" height="500" frameborder="0" scrolling="no"></iframe>
+        <section className="calendar-item">
+            <iframe className="calendar-frame" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FChicago&amp;src=dDU3MGNhbGVuZGFyQGdtYWlsLmNvbQ&amp;color=%237CB342&amp;showTitle=0&amp;showPrint=0&amp;showCalendars=1&amp;showTz=0&amp;showTabs=0&amp;showNav=1" style={{borderWidth: 0, borderRadius: '25px'}} frameBorder="0" scrolling="no"></iframe>
         </section>
     );
 }
@@ -123,7 +123,7 @@ function CalendarItem(props) {
 function Footer() {
     return (
       <footer className="footer">
-        <p className="copyright">Scoutware 1.0.0 created by <a href="https://tankop1.github.io/personal_website/" target="_blank" rel="noreferrer" style={{textDecoration: 'underline'}}>Tanner Kopel</a> © Troop 570. All rights reserved.</p>
+        <p className="copyright">Scoutware 1.0.0 <span className="hide-on-600">created by <a href="https://tankop1.github.io/personal_website/" target="_blank" rel="noreferrer" style={{textDecoration: 'underline'}}>Tanner Kopel</a> </span>© Troop 570. All rights reserved.</p>
       </footer>
     );
   }

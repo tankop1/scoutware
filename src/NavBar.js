@@ -52,7 +52,7 @@ export function NavItem(props) {
 
 export function NavLogo() {
     return (
-      <Link to="/" className="nav-logo"><h1>SCOUTWARE</h1></Link>
+      <Link to="/" className="nav-logo"><h1>S<span className="hide-on-phone">COUT</span>W<span className="hide-on-phone">ARE</span></h1></Link>
     );
 }
 
@@ -105,10 +105,10 @@ export function DropdownMenu(props) {
                 <div className="menu">
 
                     <DropdownItem leftIcon={<BackIcon/>} goToMenu="main"></DropdownItem>
-                    <DropdownItem leftIcon={<InfoIcon/>}>Campout Info</DropdownItem>
-                    <DropdownItem leftIcon={<MealIcon/>}>Meal Planner</DropdownItem>
-                    <DropdownItem leftIcon={<FeedbackIcon/>}>Campout Feedback</DropdownItem>
-                    <DropdownItem leftIcon={<LogIcon/>}>Past Campouts</DropdownItem>
+                    <Link to="/camping"><DropdownItem leftIcon={<InfoIcon/>}>Campout Info</DropdownItem></Link>
+                    <Link to="/camping/meal-planner"><DropdownItem leftIcon={<MealIcon/>}>Meal Planner</DropdownItem></Link>
+                    <Link to="/camping/campout-feedback"><DropdownItem leftIcon={<FeedbackIcon/>}>Campout Feedback</DropdownItem></Link>
+                    <Link to="/camping/campout-database"><DropdownItem leftIcon={<LogIcon/>}>Past Campouts</DropdownItem></Link>
 
                 </div>
             </CSSTransition>

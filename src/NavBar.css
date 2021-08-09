@@ -179,3 +179,9 @@ a {
     transform: translateX(110%);
     transition: all var(--speed) ease;
 }
+
+@media only screen and (max-width: 400px) {
+    .hide-on-phone {
+        display: none;
+    }
+}

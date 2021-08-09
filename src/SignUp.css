@@ -70,6 +70,14 @@
     transition: border-color 300ms;
 }
 
+.long {
+    width: 450px;
+}
+
+.short {
+    width: 200px;
+}
+
 .sign-up-item::after {
     content: "";
     position: relative;
@@ -167,4 +175,98 @@
 .link-to-login {
     color: #717377;
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 1250px) {
+    .sign-up-form {
+        margin-top: 20%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .sign-up-form {
+        margin-top: 25%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .sign-up-container {
+        width: 70%;
+    }
+
+    .sign-up-logo {
+        margin-left: calc(35% - 150px);
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .sign-up-container {
+        height: 75%;
+    }
+
+    .long {
+        width: 350px;
+    }
+
+    .short {
+        width: 150px;
+    }
+
+    .name-fields {
+        width: 350px;
+    }
+
+    .password-button {
+        margin-left: 325px;
+    }
+
+    .submit-fields {
+        flex-direction: column;
+        margin-top: 0px;
+    }
+
+    .to-login {
+        margin-top: 0px;
+        margin-bottom: -45px;
+        width: 60%;
+        text-align: center;
+    }
+
+    .sign-up-submit {
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .sign-up-container {
+        width: 75%;
+    }
+
+    .sign-up-logo {
+        margin-left: calc(37.5% - 150px);
+    }
+
+    .long {
+        width: 300px;
+    }
+
+    .short {
+        width: 125px;
+    }
+
+    .name-fields {
+        width: 300px;
+    }
+
+    .password-button {
+        margin-left: 275px;
+    }
+
+    .sign-up-submit {
+        width: 300px;
+    }
+
+    .to-login {
+        width: 70%;
+    }
 }
