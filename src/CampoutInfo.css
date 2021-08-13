@@ -1,0 +1,246 @@
+@font-face {
+    font-family: typoGrotesk;
+    src: url(assets/Typo\ Grotesk\ Thin\ Demo.otf);
+}
+
+.campout-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+}
+
+.campout-item-container {
+    margin-top: -50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    flex-wrap: wrap;
+}
+
+.next-campout {
+    background-color: #242526;
+    border-radius: 30px;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 425px;
+    margin-top: 150px;
+    animation: moveDown 1000ms ease;
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(-110%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(150%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.campout-title {
+    font-family: typoGrotesk;
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: -webkit-linear-gradient(180deg, red,orange,yellow,green,rgb(48, 48, 233), violet);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: max-content;
+}
+
+.next-campout-map {
+    width: 45%;
+    height: 100%;
+}
+
+.next-campout-text {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.next-campout-desc {
+    color: white;
+    font-family: cursive;
+    font-size: 1.2rem;
+    width: 80%;
+    width: max-content;
+    margin-top: -25px;
+}
+
+.next-desc-title {
+    color: #777777;
+    padding-right: 5px;
+}
+
+.next-desc-line {
+    max-width: 400px;
+}
+
+.campout-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    margin-bottom: 30px;
+}
+
+.short-buttons {
+    width: 335px;
+}
+
+.campout-buttons button {
+    width: 45%;
+    border-radius: 11px;
+    color: white;
+    background-color: #484a4d;
+    border: none;
+    cursor: pointer;
+    transition: filter 300ms;
+    font-family: cursive;
+    height: 40px;
+    font-size: 1.1rem;
+}
+
+.campout-buttons button:hover {
+    filter: brightness(1.2);
+}
+
+.campout-meal-planning {
+    background-color: rgb(48, 48, 233) !important;
+}
+
+.campout-scroll-container {
+    margin-top: 100px;
+    color: white;
+    font-family: cursive;
+    font-size: 1.5rem;
+    text-align: center;
+    animation: moveUp 1500ms ease;
+}
+
+.campout-scroll-container svg {
+    fill: white;
+    width: 30px;
+    animation: upDown 2s ease;
+    animation-iteration-count: infinite;
+}
+
+.small-campout-item {
+    background-color: #242526;
+    border-radius: 30px;
+    width: 425px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 250px;
+    margin-right: 50px;
+}
+
+.campout-img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    top: -100px;
+    margin: 0 auto;
+}
+
+.campout-text {
+    color: white;
+    font-family: cursive;
+    font-size: 1.2rem;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+}
+
+.campout-text p {
+    margin-top:-5px;
+}
+
+@keyframes upDown {
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    75% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .campout-item-container {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .next-campout {
+        flex-direction: column-reverse;
+        width: 500px;
+        height: 600px;
+    }
+
+    .next-campout-map {
+        width: 100%;
+    }
+
+    .next-campout-text {
+        height: 425px;
+        width: 100%;
+    }
+
+    .campout-item-container {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 1075px) {
+    .campout-item-container {
+        width: 425px;
+    }
+
+    .small-campout-item {
+        margin-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .next-campout {
+        width: 450px;
+    }
+}

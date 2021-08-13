@@ -120,7 +120,7 @@ function CalendarItem(props) {
     );
 }
 
-function Footer() {
+export function Footer() {
     return (
       <footer className="footer">
         <p className="copyright">Scoutware 1.0.0 <span className="hide-on-600">created by <a href="https://tankop1.github.io/personal_website/" target="_blank" rel="noreferrer" style={{textDecoration: 'underline'}}>Tanner Kopel</a> </span>© Troop 570. All rights reserved.</p>

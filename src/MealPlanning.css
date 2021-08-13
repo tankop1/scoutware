@@ -1,0 +1,88 @@
+.meal-planner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.control-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    padding-top: 100px;
+}
+
+.meal-info {
+    background-color: #242526;
+    color: white;
+    font-size: 1.2rem;
+    font-family: cursive;
+    border-radius: 25px;
+    padding: 10px 30px;
+}
+
+.meal-buttons {
+    width: 375px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.meal-buttons button {
+    color: white;
+    font-size: 1.1rem;
+    font-family: cursive;
+    border-radius: 20px;
+    padding: 8px 20px;
+    background-color: #484a4d;
+    border: none;
+    cursor: pointer;
+    transition: filter 300ms;
+}
+
+.meal-buttons button:hover {
+    filter: brightness(1.2);
+}
+
+.finish-plan {
+    background-color: rgb(48, 48, 233) !important;
+}
+
+.meal-workspace {
+    width: 75%;
+    margin-top: 25px;
+}
+
+.meal-input {
+    width: calc(100% - 30px);
+    height: 600px;
+    border-radius: 25px;
+    outline: none;
+    padding: 3px 15px;
+    background-attachment: local;
+    background-image:
+        linear-gradient(to right, white 10px, transparent 10px),
+        linear-gradient(to left, white 10px, transparent 10px),
+        repeating-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
+    line-height: 31px;
+    font-size: 1rem;
+    font-family: cursive;
+    resize: none;
+    overflow: hidden;
+}
+
+.myplate {
+    color: white;
+    font-family: cursive;
+    font-size: 1.1rem;
+}
+
+.myplate-link {
+    text-decoration: underline;
+    color: white;
+    transition: color 300ms;
+}
+
+.myplate-link:hover {
+    color: rgb(200, 200, 200);
+}

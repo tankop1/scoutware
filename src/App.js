@@ -2,6 +2,8 @@ import { DropdownMenu, NavBar, NavItem, NavLogo } from './NavBar';
 import { SignUp } from './SignUp';
 import { LogIn } from './LogIn';
 import { Dashboard } from './Dashboard';
+import { CampoutInfo } from './CampoutInfo';
+import { MealPlanner } from './MealPlanning';
 import { ReactComponent as HomeIcon } from './assets/homeIcon.svg';
 import { ReactComponent as FacebookIcon } from './assets/facebookIcon.svg';
 import { ReactComponent as SmugmugIcon } from './assets/smugmugIcon.svg';
@@ -50,6 +52,8 @@ function App() {
           <Route path={user ? "/login" : "/"} exact component={LogIn} />
           <Route path="/signup" component={SignUp} />
           {user && <Route path="/" exact component={Dashboard}/>}
+          {user && <Route path="/camping" exact component={CampoutInfo}/>}
+          {user && <Route path="/camping/meal-planner" exact component={MealPlanner}/>}
 
         </Switch>
 
