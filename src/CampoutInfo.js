@@ -26,7 +26,7 @@ export function CampoutInfo(props) {
     );
 }
 
-function CampoutTitle(props) {
+export function CampoutTitle(props) {
     return (
         <h1 className="campout-title" style={props.style}>{props.children}</h1>
     );

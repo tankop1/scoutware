@@ -1,0 +1,42 @@
+.admin-auth {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-auth-form {
+    background-color: #242526;
+    border-radius: 25px;
+    width: 550px;
+    height: 250px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.admin-auth-form div {
+    margin: 0 auto;
+    margin-top: calc(100px - 20px);
+}
+
+.admin-auth-form .sign-up-logo {
+    width: max-content;
+    font-size: 2rem;
+    margin-top: -100px;
+}
+
+.admin-main {
+    padding-top: 100px;
+    color: white;
+    font-family: monospace;
+}
+
+.admin-section-title {
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
+}

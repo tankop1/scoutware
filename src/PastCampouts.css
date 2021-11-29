@@ -1,0 +1,204 @@
+.past-campouts {
+    display: flex;
+    padding-top: 150px;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.campout-log {
+    background-color: #242526;
+    border-radius: 15px;
+    width: 70%;
+    height: max-content;
+    color: white;
+    font-family: cursive;
+}
+
+.log-header {
+    border-bottom: 1px solid #484a4d;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #484a4d;
+    border-radius: 8px;
+    width: 65%;
+    height: 28px;
+    padding: 4px 15px;
+}
+
+.search-bar svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+.search-input {
+    width: calc(100% - 32px);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    height: 100%;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.search-input::placeholder {
+    color: rgb(175, 175, 175);
+}
+
+.search-button {
+    border-radius: 6px;
+    background-color: rgb(48, 48, 233);
+    color: white;
+    border: none;
+    outline: none;
+    height: 35px;
+    padding: 0px 12px;
+    cursor: pointer;
+    transition: filter 300ms;
+    font-family: cursive;
+    font-size: 0.9rem;
+}
+
+.search-button:hover {
+    filter: brightness(1.2);
+}
+
+.current-campout-button {
+    background-color: #484a4d !important;
+}
+
+.log-header #Capa_1 {
+    width: 25px;
+    height: 25px;
+    fill: rgb(175, 175, 175);
+    transition: fill 500ms;
+    cursor: pointer;
+}
+
+.log-header #Capa_1:hover {
+    fill: white;
+}
+
+.header-bottom {
+    display: flex;
+    align-items: center;
+}
+
+.log-title {
+    font-size: 0.85rem;
+    color: rgb(175, 175, 175);
+    transition: color 500ms;
+    cursor: pointer;
+    width: 250px;
+}
+
+.log-title:hover {
+    color: white;
+}
+
+.identifier {
+    margin-left: 30px;
+}
+
+.date {
+    width: 200px;
+}
+
+.delete-log-item {
+    transform: scale(0.65);
+    cursor: pointer;
+}
+
+.log-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.log-footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 450px;
+}
+
+.rows-select {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: cursive;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.rows-select option {
+    background-color: #484a4d;
+}
+
+#Capa_3 {
+    width: 20px;
+    height: 20px;
+    fill: rgb(175, 175, 175);
+    transition: fill 500ms;
+    cursor: pointer;
+}
+
+#Capa_3:hover {
+    fill: white;
+}
+
+.log-arrows {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50px;
+}
+
+.turn-around svg {
+    transform: rotate(180deg);
+    margin-bottom: -3px;
+}
+
+.log-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #484a4d;
+    transition: background-color 300ms;
+}
+
+.log-item:hover {
+    background-color: #2c2c2c;
+}
+
+.log-item p {
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.log-item-identifier {
+    margin-left: 30px;
+}
+
+.log-item-date {
+    width: 200px !important;
+}

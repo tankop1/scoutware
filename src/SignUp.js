@@ -42,7 +42,7 @@ export function SignUpItem(props) {
 
     return (
         <div className={props.long ? "sign-up-item long" : "sign-up-item short"}>
-            <input autoComplete="none" type={props.type === 'password' ? passwordVisible ? 'text' : 'password' : props.type} className={props.type === 'email' ? "sign-up-input sign-up-email" : "sign-up-input"} placeholder={props.children} />
+            <input autoComplete="none" type={props.type === 'password' ? passwordVisible ? 'text' : 'password' : props.type} className={props.type === 'email' ? "sign-up-input sign-up-email" : "sign-up-input"} placeholder={props.children} onChange={props.onChange && props.onChange} />
             {props.type === 'password' && <button className="password-button" onClick={changeVisibility}>{passwordVisible ? <EyeSlashIcon /> : <EyeIcon />}</button>}
         </div>
     );

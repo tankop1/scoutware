@@ -4,6 +4,8 @@ import { LogIn } from './LogIn';
 import { Dashboard } from './Dashboard';
 import { CampoutInfo } from './CampoutInfo';
 import { MealPlanner } from './MealPlanning';
+import { CampoutFeedback } from './CampoutFeedback';
+import { Admin } from './Admin';
 import { ReactComponent as HomeIcon } from './assets/homeIcon.svg';
 import { ReactComponent as FacebookIcon } from './assets/facebookIcon.svg';
 import { ReactComponent as SmugmugIcon } from './assets/smugmugIcon.svg';
@@ -16,6 +18,7 @@ import 'firebase/auth';
 
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
+import { PastCampouts } from './PastCampouts';
 
 firebase.initializeApp({
   apiKey: "AIzaSyCmKtGb67BeoU58Lb6FVJx2thBLygnOVhU",
@@ -54,6 +57,9 @@ function App() {
           {user && <Route path="/" exact component={Dashboard}/>}
           {user && <Route path="/camping" exact component={CampoutInfo}/>}
           {user && <Route path="/camping/meal-planner" exact component={MealPlanner}/>}
+          {user && <Route path="/camping/campout-feedback" exact component={CampoutFeedback}/>}
+          {user && <Route path="/camping/campout-database" exact component={PastCampouts}/>}
+          {user && <Route path="/admin" exact component={Admin}/>}
 
         </Switch>
 

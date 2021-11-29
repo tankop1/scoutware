@@ -10,6 +10,7 @@
     justify-content: space-between;
     width: 75%;
     padding-top: 100px;
+    animation: moveDown 1.5s ease;
 }
 
 .meal-info {
@@ -51,6 +52,10 @@
 .meal-workspace {
     width: 75%;
     margin-top: 25px;
+    animation: moveRight 1.5s ease;
+    /*animation-delay: .75s;*/
+    animation-fill-mode: forwards;
+    transform: translateX(130%);
 }
 
 .meal-input {
@@ -75,6 +80,10 @@
     color: white;
     font-family: cursive;
     font-size: 1.1rem;
+    animation: moveUp 1.5s ease;
+    /*animation-delay: .75s;*/
+    animation-fill-mode: forwards;
+    transform: translateX(-140%);
 }
 
 .myplate-link {
@@ -85,4 +94,50 @@
 
 .myplate-link:hover {
     color: rgb(200, 200, 200);
+}
+
+@media only screen and (max-width: 1075px) {
+    .control-bar {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .hide-on-950 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .hide-on-600 {
+        display: none;
+    }
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(-110%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(500%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(130%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
 }

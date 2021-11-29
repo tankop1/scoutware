@@ -8,10 +8,10 @@ body {
   background-color: rgb(50, 50, 50);
 }
 
-::selection {
+/*::selection {
   background-color: white;
   color: black;
-}
+}*/
 
 ::-webkit-scrollbar {
   width: 10px;
